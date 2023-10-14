@@ -1,31 +1,73 @@
 import { gsap } from "gsap";
-import { useEffect } from "react";
+import React, { useLayoutEffect } from "react";
 
 const Navbar = () => {
-   useEffect(() => {
-      const nav = document.querySelector(".nav");
-
-      const tl = gsap.timeline();
-
-      tl.set(nav, { opacity: 0 });
-
-      tl.to(nav, { opacity: 1, duration: 3, delay: 2, ease: "power1.out" });
+   useLayoutEffect(() => {
+      gsap.set(".nav", { opacity: 0 });
+      gsap.to(".nav", { opacity: 1, duration: 3, delay: 2, ease: "power1.out" });
    }, []);
 
+   const scrollToSection = (sectionId) => {
+      const section = document.getElementById(sectionId);
+
+      if (section) {
+         const startPosition = window.scrollY;
+         const targetPosition = section.getBoundingClientRect().top + window.scrollY;
+         const distance = targetPosition - startPosition;
+         const duration = 1000;
+
+         let startTime = null;
+
+         function scrollAnimation(currentTime) {
+            if (!startTime) startTime = currentTime;
+
+            const timeElapsed = currentTime - startTime;
+            const scrollProgress = Math.min(timeElapsed / duration, 1);
+            window.scrollTo(0, startPosition + distance * scrollProgress);
+
+            if (scrollProgress < 1) {
+               requestAnimationFrame(scrollAnimation);
+            }
+         }
+
+         requestAnimationFrame(scrollAnimation);
+      }
+   };
+
    return (
-      <nav className="nav flex justify-end items-center bg-white text-black pr-96 pt-6">
+      <nav className="nav flex top-0 right-0 fixed justify-end items-center text-black pr-96 pt-6">
          <ul className="flex gap-12">
             <li>
-               <a href="/">Home</a>
+               <button
+                  className="nav-links"
+                  onClick={() => scrollToSection("home")}
+               >
+                  Home
+               </button>
             </li>
             <li>
-               <a href="/work">Work</a>
+               <button
+                  className="nav-links"
+                  onClick={() => scrollToSection("work")}
+               >
+                  Work
+               </button>
             </li>
             <li>
-               <a href="/about">About</a>
+               <button
+                  className="nav-links"
+                  onClick={() => scrollToSection("about")}
+               >
+                  About
+               </button>
             </li>
             <li>
-               <a href="/contact">Contact</a>
+               <button
+                  className="nav-links"
+                  onClick={() => scrollToSection("contact")}
+               >
+                  Contact
+               </button>
             </li>
          </ul>
       </nav>

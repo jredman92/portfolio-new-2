@@ -14,3 +14,26 @@ body {
    left: calc(50%);
    transform: translate(-50%, -50%);
 }
+
+.nav-links:hover {
+   background-color: rgb(60, 0, 255);
+}
+.nav-links.active {
+   background-color: black;
+}
+
+.square {
+   width: 800px;
+   height: 800px;
+   background-color: red;
+}
+.square-2 {
+   width: 800px;
+   height: 800px;
+   background-color: rgb(132, 3, 245);
+}
+.square-3 {
+   width: 800px;
+   height: 800px;
+   background-color: rgb(19, 226, 1);
+}
