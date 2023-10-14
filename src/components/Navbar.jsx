@@ -17,7 +17,7 @@ const Navbar = () => {
          const startPosition = window.scrollY;
          const targetPosition = section.getBoundingClientRect().top + window.scrollY;
          const distance = targetPosition - startPosition;
-         const duration = 1000;
+         const duration = 2000;
 
          let startTime = null;
 

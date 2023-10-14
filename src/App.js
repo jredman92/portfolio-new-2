@@ -39,14 +39,89 @@ function App() {
       });
    }, []);
 
+   const handleScroll = () => {
+      const homeSection = document.getElementById("home");
+      const workSection = document.getElementById("work");
+      const aboutSection = document.getElementById("about");
+      const contactSection = document.getElementById("contact");
+      const scrollPosition = window.scrollY;
+      const homeSectionHeight = homeSection.offsetHeight;
+      const workSectionHeight = workSection.offsetHeight;
+      const aboutSectionHeight = aboutSection.offsetHeight;
+      const workSectionStart = homeSectionHeight;
+      const aboutSectionStart = workSectionStart + workSectionHeight;
+      const contactSectionStart = aboutSectionStart + aboutSectionHeight;
+
+      if (scrollPosition < workSectionStart) {
+         const t = scrollPosition / workSectionStart;
+         const r = Math.round(255 - t * 100);
+         const g = 100;
+         const b = Math.round(150 + t * 100);
+         homeSection.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+      } else {
+         homeSection.style.backgroundColor = ""; // Clear the background color
+      }
+
+      if (scrollPosition >= workSectionStart && scrollPosition < aboutSectionStart) {
+         const t = (scrollPosition - workSectionStart) / (aboutSectionStart - workSectionStart);
+         workSection.style.backgroundColor = `rgb(255, ${Math.round(100 + t * 100)}, ${Math.round(200 - t * 100)})`;
+      } else {
+         workSection.style.backgroundColor = ""; // Clear the background color
+      }
+
+      if (scrollPosition >= aboutSectionStart && scrollPosition < contactSectionStart) {
+         const t = (scrollPosition - aboutSectionStart) / (contactSectionStart - aboutSectionStart);
+         aboutSection.style.backgroundColor = `rgb(255, ${Math.round(0 + t * 100)}, ${Math.round(150 + t * 100)})`;
+      } else {
+         aboutSection.style.backgroundColor = ""; // Clear the background color
+      }
+
+      if (scrollPosition >= contactSectionStart) {
+         const t = (scrollPosition - contactSectionStart) / contactSection.offsetHeight;
+         contactSection.style.backgroundColor = `rgb(211, ${Math.round(100 - t * 200)}, ${Math.round(200 + t * 100)})`;
+      } else {
+         contactSection.style.backgroundColor = ""; // Clear the background color
+      }
+   };
+
+   useEffect(() => {
+      // Attach the scroll event listener
+      window.addEventListener("scroll", handleScroll);
+
+      return () => {
+         // Remove the event listener when the component unmounts
+         window.removeEventListener("scroll", handleScroll);
+      };
+   }, []);
+
    return (
       <>
          <Navbar />
 
-         <section id="home">{<Home />}</section>
-         <section id="work">{<Work />}</section>
-         <section id="about">{<About />}</section>
-         <section id="contact">{<Contact />}</section>
+         <section
+            className="home-section"
+            id="home"
+         >
+            {<Home />}
+         </section>
+         <section
+            className="work-section"
+            id="work"
+         >
+            {<Work />}
+         </section>
+         <section
+            className="about-section"
+            id="about"
+         >
+            {<About />}
+         </section>
+         <section
+            className="contact-section"
+            id="contact"
+         >
+            {<Contact />}
+         </section>
       </>
    );
 }
