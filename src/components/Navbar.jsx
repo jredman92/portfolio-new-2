@@ -7,6 +7,9 @@ const Navbar = () => {
       gsap.to(".nav", { opacity: 1, duration: 3, delay: 2, ease: "power1.out" });
    }, []);
 
+   // Define a custom cubic bezier easing function for the scroll animation
+   const customEase = (t) => (t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1);
+
    const scrollToSection = (sectionId) => {
       const section = document.getElementById(sectionId);
 
@@ -23,7 +26,10 @@ const Navbar = () => {
 
             const timeElapsed = currentTime - startTime;
             const scrollProgress = Math.min(timeElapsed / duration, 1);
-            window.scrollTo(0, startPosition + distance * scrollProgress);
+            const easedProgress = customEase(scrollProgress); // Use the custom easing function
+            const newPosition = startPosition + distance * easedProgress;
+
+            window.scrollTo(0, newPosition);
 
             if (scrollProgress < 1) {
                requestAnimationFrame(scrollAnimation);

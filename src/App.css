@@ -8,7 +8,14 @@ body {
 
 .j {
    position: absolute;
-   z-index: -1;
+   width: 350px;
+   top: calc(50%);
+   left: calc(50%);
+   transform: translate(-50%, -50%);
+}
+
+.hi {
+   position: absolute;
    width: 350px;
    top: calc(50%);
    left: calc(50%);
@@ -36,4 +43,9 @@ body {
    width: 800px;
    height: 800px;
    background-color: rgb(19, 226, 1);
+}
+
+#home {
+   display: flex;
+   top: 0;
 }
