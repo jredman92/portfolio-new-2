@@ -13,14 +13,16 @@ const Navbar = () => {
    }, []);
 
    // Define a custom cubic bezier easing function for the scroll animation
-   const customEase = (t) => (t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1);
+   const customEase = (t) =>
+      t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
 
    const scrollToSection = (sectionId) => {
       const section = document.getElementById(sectionId);
 
       if (section) {
          const startPosition = window.scrollY;
-         const targetPosition = section.getBoundingClientRect().top + window.scrollY;
+         const targetPosition =
+            section.getBoundingClientRect().top + window.scrollY;
          const distance = targetPosition - startPosition;
          const duration = 2000;
 
