@@ -1,7 +1,11 @@
 import gsap from "gsap";
-import React, { useEffect } from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import React, { useEffect, useRef } from "react";
 
 const Work = () => {
+   const imgRef = useRef(null);
+   gsap.registerPlugin(ScrollTrigger);
+
    useEffect(() => {
       gsap.to(".j", {
          rotation: -720,
@@ -34,13 +38,9 @@ const Work = () => {
                height="400"
                width="300"
                src="img/j.png"
-               data-speedx="0.1"
-               data-speedy="0.2"
-               data-speedz="0.2"
-               data-rotation="0.02"
-               data-distance="1700"
                className="parallax j"
                alt=""
+               ref={imgRef}
             />
          </div>
       </div>
