@@ -4,7 +4,12 @@ import React, { useLayoutEffect } from "react";
 const Navbar = () => {
    useLayoutEffect(() => {
       gsap.set(".nav", { opacity: 0 });
-      gsap.to(".nav", { opacity: 1, duration: 3, delay: 2, ease: "power1.out" });
+      gsap.to(".nav", {
+         opacity: 1,
+         duration: 3,
+         delay: 2,
+         ease: "power1.out",
+      });
    }, []);
 
    // Define a custom cubic bezier easing function for the scroll animation
@@ -40,43 +45,81 @@ const Navbar = () => {
       }
    };
 
+   // <svg
+   //    width="230"
+   //    height="120"
+   //    xmlns="http://www.w3.org/2000/svg"
+   //    xmlns:xlink="http://www.w3.org/1999/xlink"
+   // >
+   //    <filter id="blurMe">
+   //       <feGaussianBlur in="SourceGraphic" stdDeviation="5" />
+   //    </filter>
+
+   //    <circle cx="60" cy="60" r="50" fill="green" />
+
+   //    <circle cx="170" cy="60" r="50" fill="green" filter="url(#blurMe)" />
+   // </svg>;
+
    return (
-      <nav className="nav flex top-0 right-0 fixed justify-end items-center text-black pr-96 pt-6">
-         <ul className="flex gap-12">
-            <li>
-               <button
-                  className="nav-links"
-                  onClick={() => scrollToSection("home")}
-               >
-                  Home
-               </button>
-            </li>
-            <li>
-               <button
-                  className="nav-links"
-                  onClick={() => scrollToSection("work")}
-               >
-                  Work
-               </button>
-            </li>
-            <li>
-               <button
-                  className="nav-links"
-                  onClick={() => scrollToSection("about")}
-               >
-                  About
-               </button>
-            </li>
-            <li>
-               <button
-                  className="nav-links"
-                  onClick={() => scrollToSection("contact")}
-               >
-                  Contact
-               </button>
-            </li>
-         </ul>
-      </nav>
+      <>
+         {/* <svg
+            width="230"
+            height="120"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+         >
+            <filter id="blurMe">
+               <feGaussianBlur in="SourceGraphic" stdDeviation="5" />
+            </filter>
+
+            <circle cx="60" cy="60" r="50" fill="green" />
+
+            <circle
+               cx="170"
+               cy="60"
+               r="50"
+               fill="green"
+               filter="url(#blurMe)"
+            />
+         </svg> */}
+
+         <nav className="nav flex top-0 right-0 fixed justify-end items-center text-black pr-96 pt-6 z-50">
+            <ul className="flex gap-12">
+               <li>
+                  <button
+                     className="nav-links"
+                     onClick={() => scrollToSection("home")}
+                  >
+                     Home
+                  </button>
+               </li>
+               <li>
+                  <button
+                     className="nav-links"
+                     onClick={() => scrollToSection("work")}
+                  >
+                     Work
+                  </button>
+               </li>
+               <li>
+                  <button
+                     className="nav-links"
+                     onClick={() => scrollToSection("about")}
+                  >
+                     About
+                  </button>
+               </li>
+               <li>
+                  <button
+                     className="nav-links"
+                     onClick={() => scrollToSection("contact")}
+                  >
+                     Contact
+                  </button>
+               </li>
+            </ul>
+         </nav>
+      </>
    );
 };
 
