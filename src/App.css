@@ -52,7 +52,7 @@ body {
 
 .home-section {
    height: 100vh;
-   background-color: orange;
+   background-color: rgb(73, 73, 73);
    transition: background-color 2s ease-in-out;
 }
 

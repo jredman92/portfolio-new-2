@@ -7,16 +7,33 @@ const Work = () => {
    gsap.registerPlugin(ScrollTrigger);
 
    useEffect(() => {
-      gsap.to(".j", {
-         rotation: -720,
-         duration: 5,
-         x: -190,
-         y: -230,
-      });
-      gsap.from(".j", {
-         x: 1400,
-         y: -230,
-      });
+      gsap.fromTo(
+         ".j",
+         {
+            x: 1400,
+            y: -230,
+         },
+         {
+            rotation: -720,
+            duration: 5,
+            x: 0,
+            y: -230,
+            onComplete: () => {
+               gsap.to(".j", {
+                  scrollTrigger: {
+                     start: "200px",
+                     end: "900px",
+                     scrub: 1,
+                  },
+                  rotation: 1,
+                  duration: 5,
+                  x: 1400,
+                  y: -230,
+                  overwrite: true,
+               });
+            },
+         }
+      );
    }, []);
 
    return (
