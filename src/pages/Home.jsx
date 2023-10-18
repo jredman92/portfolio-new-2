@@ -25,9 +25,9 @@ const Work = () => {
                      end: "900px",
                      scrub: 1,
                   },
-                  rotation: 1,
+                  rotation: -1440,
                   duration: 5,
-                  x: 1400,
+                  x: -1400,
                   y: -230,
                   overwrite: true,
                });
@@ -45,7 +45,7 @@ const Work = () => {
                data-speedz="0.015"
                data-rotation="0.02"
                data-distance="1700"
-               className="text-6xl font-black flex pt-[0px] pl-6 text-blue-400 hi parallax z-10"
+               className="text-6xl font-black flex pt-[0px] pl-6 hi parallax z-10"
             >
                Hi
             </p>

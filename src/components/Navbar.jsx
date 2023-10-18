@@ -73,8 +73,8 @@ const Navbar = () => {
       gsap.set(".nav", { opacity: 0 });
       gsap.to(".nav", {
          opacity: 1,
-         duration: 0,
-         delay: 0,
+         duration: 3,
+         delay: 2,
          ease: "power1.out",
       });
 
