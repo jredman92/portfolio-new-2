@@ -1,5 +1,5 @@
-import { Sine, gsap } from "gsap";
-import React, { useEffect, useLayoutEffect } from "react";
+import { gsap } from "gsap";
+import React, { useEffect } from "react";
 
 const Navbar = () => {
    useEffect(() => {
@@ -12,17 +12,16 @@ const Navbar = () => {
 
       gsap.set(circle1, { transformOrigin: "50%" });
       gsap.set(circle2, { transformOrigin: "50%" });
-      gsap.registerPlugin(Sine);
 
       navlinks.forEach((link, index) => {
          link.addEventListener("click", (e) => {
             let tl1 = gsap.timeline({ paused: true });
-            let tl2 = gsap.timeline({ paused: true, delay: 0.1 });
+            let tl2 = gsap.timeline({ paused: true });
 
             tl1.to(circle1, {
                x: 100 * index,
-               duration: 0.5,
-               ease: "sine.inOut",
+               duration: 0.25,
+               ease: "sine.ease",
             });
             tl1.to(
                circle1,
@@ -30,7 +29,7 @@ const Navbar = () => {
                   scaleX: 2.1,
                   scaleY: 0.8,
                   duration: 0.25,
-                  ease: "sine.inOut",
+                  ease: "sine.ease",
                },
                0
             );
@@ -38,32 +37,32 @@ const Navbar = () => {
                scaleX: 1,
                scaleY: 1,
                duration: 0.25,
-               ease: "sine.inOut",
+               ease: "sine.ease",
             });
             tl2.to(
                circle2,
                {
                   x: 100 * index,
-                  duration: 0.5,
-                  ease: "sine.inOut",
+                  duration: 0.3,
+                  ease: "sine.ease",
                },
-               0.25
+               0
             );
             tl2.to(
                circle2,
                {
                   scaleX: 2.1,
                   scaleY: 0.8,
-                  duration: 0.25,
-                  ease: "sine.inOut",
+                  duration: 0.3,
+                  ease: "sine.ease",
                },
                0
             );
             tl2.to(circle2, {
                scaleX: 1,
                scaleY: 1,
-               duration: 0.25,
-               ease: "sine.inOut",
+               duration: 0.3,
+               ease: "sine.ease",
             });
 
             tl1.play();
@@ -74,12 +73,10 @@ const Navbar = () => {
       gsap.set(".nav", { opacity: 0 });
       gsap.to(".nav", {
          opacity: 1,
-         duration: 3,
-         delay: 2,
+         duration: 0,
+         delay: 0,
          ease: "power1.out",
       });
-
-      // Your scroll animation and
 
       const customEase = (t) => (t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1);
 
@@ -118,7 +115,7 @@ const Navbar = () => {
       // Attach event listeners to the buttons to trigger scrolling
       const buttons = document.querySelectorAll(".nav-links");
 
-      buttons.forEach((button, index) => {
+      buttons.forEach((button) => {
          button.addEventListener("click", (e) => {
             const sectionId = e.target.dataset.section;
             scrollToSection(sectionId);
@@ -127,35 +124,33 @@ const Navbar = () => {
    }, []);
 
    return (
-      <>
+      <nav className="nav flex top-0 right-0 fixed justify-end items-center text-black pr-96 pt-6 z-50">
          <div id="nav-container">
             <svg
-               width="230"
+               width="430"
                height="120"
                xmlns="http://www.w3.org/2000/svg"
             >
                <filter id="blurMe">
                   <feGaussianBlur
                      in="SourceGraphic"
-                     stdDeviation="5"
+                     stdDeviation="1"
                   />
                </filter>
                <circle
-                  cx="60"
-                  cy="80"
-                  r="50"
-                  fill="green"
+                  cx="205"
+                  cy="25"
+                  r="5"
                />
                <circle
-                  cx="60"
-                  cy="80"
-                  r="50"
-                  fill="green"
+                  cx="205"
+                  cy="25"
+                  r="5"
                   filter="url(#blurMe)"
                />
             </svg>
 
-            <nav className="nav flex top-0 right-0 fixed justify-end items-center text-black pr-96 pt-6 z-50 h-50">
+            <div>
                <ul className="flex gap-12">
                   <li>
                      <button
@@ -190,9 +185,9 @@ const Navbar = () => {
                      </button>
                   </li>
                </ul>
-            </nav>
+            </div>
          </div>
-      </>
+      </nav>
    );
 };
 

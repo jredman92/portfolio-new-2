@@ -75,23 +75,21 @@ body {
 }
 
 svg circle {
-   fill: rgba(255, 255, 255, 0.4);
+   fill: rgba(255, 255, 255, 0.961);
    z-index: 99;
+   left: 100px;
 }
 
 #nav-container {
    position: relative;
-   width: 8000px;
-   height: 80px;
 }
 
 nav {
    position: absolute;
    z-index: 2;
-   left: 970px;
+   right: 270px;
    top: 0;
    width: 600px;
-   height: 10;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -102,14 +100,16 @@ nav {
    height: 100%;
    font-size: 20px;
    line-height: 100px;
-   color: rgb(44, 35, 92);
+   color: rgb(255, 255, 255);
    text-align: center;
    z-index: 100;
 }
 
 svg {
    position: absolute;
-   z-index: 1;
-   left: 785px;
-   top: 80px;
+   z-index: -1;
+   left: -180px;
+   top: 0px;
+   height: 200px;
+   width: 700px;
 }
