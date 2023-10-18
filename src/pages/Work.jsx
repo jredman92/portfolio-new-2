@@ -3,17 +3,19 @@ import React, { useEffect } from "react";
 
 const Work = () => {
    useEffect(() => {
-      gsap.to(".square", {
-         rotation: -360,
-         duration: 5,
-         x: 0,
-         y: 0,
-         start: "100px",
-      });
-      gsap.from(".square", {
-         x: 1400,
-         y: 0,
-      });
+      gsap.fromTo(
+         ".square",
+         {
+            x: 1400,
+            y: 0,
+         },
+         {
+            rotation: -360,
+            duration: 5,
+            x: 0,
+            y: 0,
+         }
+      );
    }, []);
 
    return (
