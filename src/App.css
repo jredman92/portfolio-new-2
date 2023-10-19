@@ -9,6 +9,27 @@ body {
    height: 100vh;
 }
 
+/* Customize the scrollbar track */
+::-webkit-scrollbar {
+   width: 6px; /* Adjust the width of the scrollbar */
+}
+
+/* Customize the scrollbar thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+   background: rgb(174, 174, 174); /* Set your desired color */
+   border-radius: 5px; /* Add some rounded corners */
+}
+
+/* Customize the scrollbar track on hover */
+::-webkit-scrollbar-thumb:hover {
+   background: rgb(255, 255, 255);
+}
+
+/* Customize the scrollbar track background */
+::-webkit-scrollbar-track {
+   background: #313131;
+}
+
 h1 {
    position: relative;
    top: -100px;
@@ -58,24 +79,26 @@ h1 {
 
 .home-section {
    height: 100vh;
-   background: linear-gradient(to bottom, #393939, #000000);
+   background: linear-gradient(to bottom right, #dd00ce, #4500c4);
 
-   transition: background-color 2s ease-in-out;
+   /* transition: background-color 2s ease-in-out; */
 }
 
 .work-section {
    height: 100vh;
-   background: linear-gradient(to bottom, #000000, #494949);
+   background-color: #313131;
    transition: background-color 2s ease-in-out;
 }
 .about-section {
    height: 100vh;
-   background: linear-gradient(to bottom, #494949, #000000);
+   background-color: #313131;
+
    transition: background-color 2s ease-in-out;
 }
 .contact-section {
    height: 100vh;
-   background: linear-gradient(to bottom, #000000, #494949);
+   background-color: #313131;
+
    transition: background-color 2s ease-in-out;
 }
 

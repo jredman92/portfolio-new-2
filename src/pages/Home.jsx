@@ -11,13 +11,11 @@ const Work = () => {
          ".j",
          {
             x: 1400,
-            y: -230,
          },
          {
             rotation: -720,
             duration: 5,
             x: 0,
-            y: -230,
             onComplete: () => {
                gsap.to(".j", {
                   scrollTrigger: {
@@ -28,7 +26,6 @@ const Work = () => {
                   rotation: -1440,
                   duration: 5,
                   x: -1400,
-                  y: -230,
                   overwrite: true,
                });
             },

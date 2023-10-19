@@ -10,34 +10,39 @@ const Work = () => {
       gsap.fromTo(
          ".square",
          {
-            scrollTrigger: {
-               start: "800px",
-               end: "1300px",
-               scrub: 1,
-               markers: true,
-            },
-            rotation: 0,
-            x: 1400,
+            rotation: 1,
+            x: -1400,
             y: -230,
          },
          {
-            rotation: -720,
+            rotation: 360,
             duration: 5,
             x: 0,
             y: -230,
+            scrollTrigger: {
+               start: "600px",
+               end: "800px",
+               scrub: 1,
+            },
             onComplete: () => {
-               gsap.to(".square", {
-                  scrollTrigger: {
-                     start: "1300px",
-                     end: "2500px",
-                     scrub: 1,
-                     markers: true,
+               gsap.fromTo(
+                  ".square",
+                  {
+                     x: 0,
+                     y: -230,
                   },
-                  rotation: -1440,
-                  x: -1400,
-                  y: -230,
-                  overwrite: true,
-               });
+                  {
+                     rotation: 1080,
+                     x: 2000,
+                     y: -230,
+                     scrollTrigger: {
+                        start: "1300px",
+                        end: "2500px",
+                        scrub: 1,
+                     },
+                     overwrite: false,
+                  }
+               );
             },
          }
       );
