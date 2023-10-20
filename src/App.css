@@ -9,23 +9,19 @@ body {
    height: 100vh;
 }
 
-/* Customize the scrollbar track */
 ::-webkit-scrollbar {
-   width: 6px; /* Adjust the width of the scrollbar */
+   width: 6px;
 }
 
-/* Customize the scrollbar thumb (the draggable part) */
 ::-webkit-scrollbar-thumb {
-   background: rgb(174, 174, 174); /* Set your desired color */
-   border-radius: 5px; /* Add some rounded corners */
+   background: rgb(174, 174, 174);
+   border-radius: 5px;
 }
 
-/* Customize the scrollbar track on hover */
 ::-webkit-scrollbar-thumb:hover {
    background: rgb(255, 255, 255);
 }
 
-/* Customize the scrollbar track background */
 ::-webkit-scrollbar-track {
    background: #313131;
 }
