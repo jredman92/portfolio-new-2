@@ -52,17 +52,6 @@ function App() {
    }, []);
 
    useEffect(() => {
-      gsap.set(".all-pages", { opacity: 0 }); // Set the initial opacity to 0
-
-      gsap.to(".all-pages", {
-         opacity: 1,
-         duration: 2,
-         delay: 0,
-         ease: "power1.out",
-      });
-   }, []);
-
-   useEffect(() => {
       const parallax_el = document.querySelectorAll(".parallax-name");
       let xValue = 0,
          yValue = 0;
