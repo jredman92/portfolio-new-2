@@ -8,6 +8,13 @@ body {
    overflow-x: hidden;
    height: 100vh;
    background: linear-gradient(to bottom right, #4500c4, #dd00ce);
+   scrollbar-color: #313131;
+}
+
+html {
+   width: 100vw;
+   scrollbar-color: #313131;
+   scroll-padding-block-end: 10px;
 }
 
 ::-webkit-scrollbar {
@@ -483,4 +490,9 @@ svg {
    top: 0px;
    height: 200px;
    width: 700px;
+}
+
+/* Define a CSS class for hiding overflow */
+.hide-overflow {
+   overflow: hidden;
 }

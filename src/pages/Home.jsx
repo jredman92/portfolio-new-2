@@ -74,6 +74,16 @@ const Work = () => {
       });
    }, []);
 
+   useEffect(() => {
+      gsap.set(".scroll-down", { opacity: 0 });
+      gsap.to(".scroll-down", {
+         opacity: 1,
+         duration: 5,
+         delay: 3,
+         ease: "power1.out",
+      });
+   }, []);
+
    return (
       <>
          <div className="mt-0 mb-0 pt-0 pb-0 flex flex-col items-center justify-center h-screen">
@@ -436,8 +446,10 @@ const Work = () => {
                />
             </div>
          </div>
-         <p className="absolute bottom-5 left-0 right-10 text-center text-white">Scroll Down</p>
-         <p className="arrow absolute bottom-6 left-20 right-0 text-center text-white">↓</p>
+         <div className="scroll-down">
+            <p className="absolute bottom-5 left-0 right-10 text-center text-white">Scroll Down</p>
+            <p className="arrow absolute bottom-6 left-20 right-0 text-center text-white">↓</p>
+         </div>
       </>
    );
 };

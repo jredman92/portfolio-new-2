@@ -180,7 +180,7 @@ const Navbar = () => {
       gsap.to(".nav", {
          opacity: 1,
          duration: 5,
-         delay: 0,
+         delay: 3,
          ease: "power1.out",
       });
    }, []);

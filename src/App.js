@@ -9,13 +9,21 @@ import Work from "./pages/Work";
 
 function App() {
    useEffect(() => {
-      gsap.set(".all-pages", { opacity: 0 }); // Set the initial opacity to 0
+      // Add the CSS class to the body to hide overflow during animation
+      document.body.classList.add("hide-overflow");
 
-      gsap.to(".all-pages", {
+      // Animate the "all-pages" element to fade in on page load
+      const animation = gsap.to(".all-pages", {
          opacity: 1,
-         duration: 2,
-         delay: 3,
-         ease: "power1.out",
+         duration: 1.9,
+         delay: 1.2,
+         ease: "power1.in",
+      });
+
+      // Remove the CSS class and clear the animation onComplete
+      animation.eventCallback("onComplete", () => {
+         document.body.classList.remove("hide-overflow");
+         animation.kill(); // Stop the animation if it's not already completed
       });
    }, []);
 
