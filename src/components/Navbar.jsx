@@ -70,14 +70,6 @@ const Navbar = () => {
          });
       });
 
-      gsap.set(".nav", { opacity: 0 });
-      gsap.to(".nav", {
-         opacity: 1,
-         duration: 3,
-         delay: 2,
-         ease: "power1.out",
-      });
-
       const customEase = (t) => (t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1);
 
       // Function to handle scrolling to a section
@@ -122,6 +114,16 @@ const Navbar = () => {
          });
       });
    }, []);
+
+   useEffect(() => {
+      gsap.set(".nav", { opacity: 0 });
+      gsap.to(".nav", {
+         opacity: 1,
+         duration: 5,
+         delay: 6,
+         ease: "power1.out",
+      });
+   });
 
    return (
       <nav className="nav flex top-0 right-0 fixed justify-end items-center text-black pr-96 pt-6 z-50">

@@ -7,7 +7,7 @@ body {
    margin: 0;
    overflow-x: hidden;
    height: 100vh;
-   background-color: black;
+   background: linear-gradient(to bottom right, #4500c4, #dd00ce);
 }
 
 ::-webkit-scrollbar {
@@ -45,16 +45,16 @@ h1 {
    color: white;
    width: 350px;
    top: calc(50% - 149px);
-   left: calc(50% - 400px);
+   left: calc(50% - 300px);
    transform: translate(-50%, -50%);
 }
 
-.eye {
+.i-1 {
    position: absolute;
    color: white;
    width: 350px;
    top: calc(50% - 145px);
-   left: calc(50% - 340px);
+   left: calc(50% - 240px);
    transform: translate(-50%, -50%);
 }
 
@@ -63,7 +63,7 @@ h1 {
    color: white;
    width: 350px;
    top: calc(50% - 150px);
-   left: calc(50% - 300px);
+   left: calc(50% - 200px);
    transform: translate(-50%, -50%);
 }
 
@@ -72,7 +72,7 @@ h1 {
    color: white;
    width: 350px;
    top: calc(50% - 50px);
-   left: calc(50% - 490px);
+   left: calc(50% - 600px);
    transform: translate(-50%, -50%);
 }
 .comma-2 {
@@ -80,7 +80,7 @@ h1 {
    color: white;
    width: 350px;
    top: calc(50% - 60px);
-   left: calc(50% - 460px);
+   left: calc(50% - 570px);
    transform: translate(-50%, -50%);
 }
 .m {
@@ -88,7 +88,7 @@ h1 {
    color: white;
    width: 350px;
    top: calc(50% - 50px);
-   left: calc(50% - 430px);
+   left: calc(50% - 550px);
    transform: translate(-50%, -50%);
 }
 
@@ -97,7 +97,7 @@ h1 {
    color: white;
    width: 900px;
    top: calc(50% - 50px);
-   left: calc(50% - 300px);
+   left: calc(50% - 140px);
    transform: translate(-50%, -50%);
 }
 
@@ -105,96 +105,96 @@ h1 {
    position: absolute;
    color: white;
    width: 750px;
-   top: calc(50% + 50px);
-   left: calc(50% - 340px);
+   top: calc(50% - 50px);
+   left: calc(50% - 170px);
    transform: translate(-50%, -50%);
 }
 .y {
    position: absolute;
    color: white;
    width: 750px;
-   top: calc(50% + 50px);
-   left: calc(50% - 340px);
+   top: calc(50% - 50px);
+   left: calc(50% - 120px);
    transform: translate(-50%, -50%);
 }
 .m-2 {
    position: absolute;
    color: white;
    width: 750px;
-   top: calc(50% + 50px);
-   left: calc(50% - 340px);
+   top: calc(50% - 55px);
+   left: calc(50% - 80px);
    transform: translate(-50%, -50%);
 }
 .i-2 {
    position: absolute;
    color: white;
    width: 750px;
-   top: calc(50% + 50px);
-   left: calc(50% - 340px);
+   top: calc(50% - 50px);
+   left: calc(50% - 0px);
    transform: translate(-50%, -50%);
 }
 .e {
    position: absolute;
    color: white;
    width: 750px;
-   top: calc(50% + 50px);
-   left: calc(50% - 340px);
+   top: calc(50% - 50px);
+   left: calc(50% + 30px);
    transform: translate(-50%, -50%);
 }
 .R {
    position: absolute;
    color: white;
    width: 750px;
-   top: calc(50% + 50px);
-   left: calc(50% - 340px);
+   top: calc(50% - 50px);
+   left: calc(50% + 100px);
    transform: translate(-50%, -50%);
 }
 .e-2 {
    position: absolute;
    color: white;
    width: 750px;
-   top: calc(50% + 50px);
-   left: calc(50% - 340px);
+   top: calc(50% - 50px);
+   left: calc(50% + 150px);
    transform: translate(-50%, -50%);
 }
 .d {
    position: absolute;
    color: white;
    width: 750px;
-   top: calc(50% + 50px);
-   left: calc(50% - 340px);
+   top: calc(50% - 50px);
+   left: calc(50% + 200px);
    transform: translate(-50%, -50%);
 }
 .m-3 {
    position: absolute;
    color: white;
    width: 750px;
-   top: calc(50% + 50px);
-   left: calc(50% - 340px);
+   top: calc(50% - 60px);
+   left: calc(50% + 240px);
    transform: translate(-50%, -50%);
 }
 .a-2 {
    position: absolute;
    color: white;
    width: 750px;
-   top: calc(50% + 50px);
-   left: calc(50% - 340px);
+   top: calc(50% - 50px);
+   left: calc(50% + 320px);
    transform: translate(-50%, -50%);
 }
 .n {
    position: absolute;
    color: white;
    width: 750px;
-   top: calc(50% + 50px);
-   left: calc(50% - 340px);
+   top: calc(50% - 50px);
+   left: calc(50% + 370px);
    transform: translate(-50%, -50%);
 }
 .comma-3 {
    position: absolute;
    color: white;
-   width: 350px;
-   top: calc(50% - 60px);
-   left: calc(50% - 460px);
+   width: 750px;
+   top: calc(50% - 50px);
+   left: calc(50% + 430px);
    transform: translate(-50%, -50%);
 }
 .A {
@@ -202,7 +202,7 @@ h1 {
    color: white;
    width: 750px;
    top: calc(50% + 50px);
-   left: calc(50% - 340px);
+   left: calc(50% - 460px);
    transform: translate(-50%, -50%);
 }
 .S {
@@ -210,7 +210,7 @@ h1 {
    color: white;
    width: 750px;
    top: calc(50% + 50px);
-   left: calc(50% - 340px);
+   left: calc(50% - 360px);
    transform: translate(-50%, -50%);
 }
 .o {
@@ -218,7 +218,7 @@ h1 {
    color: white;
    width: 750px;
    top: calc(50% + 50px);
-   left: calc(50% - 340px);
+   left: calc(50% - 310px);
    transform: translate(-50%, -50%);
 }
 .f {
@@ -226,7 +226,7 @@ h1 {
    color: white;
    width: 750px;
    top: calc(50% + 50px);
-   left: calc(50% - 340px);
+   left: calc(50% - 260px);
    transform: translate(-50%, -50%);
 }
 .t {
@@ -234,7 +234,7 @@ h1 {
    color: white;
    width: 750px;
    top: calc(50% + 50px);
-   left: calc(50% - 340px);
+   left: calc(50% - 220px);
    transform: translate(-50%, -50%);
 }
 .w {
@@ -242,7 +242,7 @@ h1 {
    color: white;
    width: 750px;
    top: calc(50% + 50px);
-   left: calc(50% - 340px);
+   left: calc(50% - 185px);
    transform: translate(-50%, -50%);
 }
 .a-3 {
@@ -250,7 +250,7 @@ h1 {
    color: white;
    width: 750px;
    top: calc(50% + 50px);
-   left: calc(50% - 340px);
+   left: calc(50% - 130px);
    transform: translate(-50%, -50%);
 }
 .r {
@@ -258,7 +258,7 @@ h1 {
    color: white;
    width: 750px;
    top: calc(50% + 50px);
-   left: calc(50% - 340px);
+   left: calc(50% - 80px);
    transform: translate(-50%, -50%);
 }
 .e-3 {
@@ -266,7 +266,7 @@ h1 {
    color: white;
    width: 750px;
    top: calc(50% + 50px);
-   left: calc(50% - 340px);
+   left: calc(50% - 40px);
    transform: translate(-50%, -50%);
 }
 .D {
@@ -274,7 +274,7 @@ h1 {
    color: white;
    width: 750px;
    top: calc(50% + 50px);
-   left: calc(50% - 340px);
+   left: calc(50% + 60px);
    transform: translate(-50%, -50%);
 }
 .e-4 {
@@ -282,7 +282,7 @@ h1 {
    color: white;
    width: 750px;
    top: calc(50% + 50px);
-   left: calc(50% - 340px);
+   left: calc(50% + 120px);
    transform: translate(-50%, -50%);
 }
 .v {
@@ -290,7 +290,7 @@ h1 {
    color: white;
    width: 750px;
    top: calc(50% + 50px);
-   left: calc(50% - 340px);
+   left: calc(50% + 165px);
    transform: translate(-50%, -50%);
 }
 .e-5 {
@@ -298,7 +298,7 @@ h1 {
    color: white;
    width: 750px;
    top: calc(50% + 50px);
-   left: calc(50% - 340px);
+   left: calc(50% + 210px);
    transform: translate(-50%, -50%);
 }
 .l {
@@ -306,7 +306,7 @@ h1 {
    color: white;
    width: 750px;
    top: calc(50% + 50px);
-   left: calc(50% - 340px);
+   left: calc(50% + 250px);
    transform: translate(-50%, -50%);
 }
 .o-2 {
@@ -314,7 +314,7 @@ h1 {
    color: white;
    width: 750px;
    top: calc(50% + 50px);
-   left: calc(50% - 340px);
+   left: calc(50% + 280px);
    transform: translate(-50%, -50%);
 }
 .p {
@@ -322,7 +322,7 @@ h1 {
    color: white;
    width: 750px;
    top: calc(50% + 50px);
-   left: calc(50% - 340px);
+   left: calc(50% + 330px);
    transform: translate(-50%, -50%);
 }
 .e-6 {
@@ -330,7 +330,7 @@ h1 {
    color: white;
    width: 750px;
    top: calc(50% + 50px);
-   left: calc(50% - 340px);
+   left: calc(50% + 380px);
    transform: translate(-50%, -50%);
 }
 .r-2 {
@@ -338,7 +338,7 @@ h1 {
    color: white;
    width: 750px;
    top: calc(50% + 50px);
-   left: calc(50% - 340px);
+   left: calc(50% + 420px);
    transform: translate(-50%, -50%);
 }
 .period {
@@ -346,7 +346,7 @@ h1 {
    color: white;
    width: 750px;
    top: calc(50% + 50px);
-   left: calc(50% - 340px);
+   left: calc(50% + 470px);
    transform: translate(-50%, -50%);
 }
 
@@ -379,7 +379,6 @@ h1 {
    position: absolute;
    height: 100%;
    width: 100%;
-   background-color: black;
    opacity: 1;
    z-index: 1;
 }
@@ -387,8 +386,6 @@ h1 {
 .home-section {
    height: 100vh;
    background: linear-gradient(to bottom right, #dd00ce, #4500c4);
-
-   /* transition: background-color 2s ease-in-out; */
 }
 
 .work-section {

@@ -14,7 +14,7 @@ function App() {
       gsap.to(".all-pages", {
          opacity: 1,
          duration: 2,
-         delay: 0,
+         delay: 3,
          ease: "power1.out",
       });
    }, []);
@@ -69,7 +69,7 @@ function App() {
 
             el.style.transform = `perspective(2300px) translateZ(${zValue * speedz}px) rotateY(${
                rotateDegree * rotateSpeed
-            }deg) translateX(calc(-50% + ${xValue * speedx}px)) translateY(calc(-50% + ${yValue * speedy}px))`;
+            }deg) translateX(calc(-50% + ${xValue * speedx}px)) translateY(calc(-50% + ${-yValue * speedy}px))`;
          });
       }
 
