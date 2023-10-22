@@ -43,6 +43,7 @@ h1 {
 .h {
    position: absolute;
    color: white;
+   text-shadow: -3px 5px 4px #000000;
    width: 350px;
    top: calc(50% - 149px);
    left: calc(50% - 300px);
@@ -52,6 +53,7 @@ h1 {
 .i-1 {
    position: absolute;
    color: white;
+   text-shadow: -3px 5px 4px #000000;
    width: 350px;
    top: calc(50% - 145px);
    left: calc(50% - 240px);
@@ -61,6 +63,7 @@ h1 {
 .comma {
    position: absolute;
    color: white;
+   text-shadow: -3px 5px 4px #000000;
    width: 350px;
    top: calc(50% - 150px);
    left: calc(50% - 200px);
@@ -70,6 +73,7 @@ h1 {
 .I {
    position: absolute;
    color: white;
+   text-shadow: -3px 5px 4px #000000;
    width: 350px;
    top: calc(50% - 50px);
    left: calc(50% - 600px);
@@ -78,6 +82,7 @@ h1 {
 .comma-2 {
    position: absolute;
    color: white;
+   text-shadow: -3px 5px 4px #000000;
    width: 350px;
    top: calc(50% - 60px);
    left: calc(50% - 570px);
@@ -86,6 +91,7 @@ h1 {
 .m {
    position: absolute;
    color: white;
+   text-shadow: -3px 5px 4px #000000;
    width: 350px;
    top: calc(50% - 50px);
    left: calc(50% - 550px);
@@ -95,6 +101,7 @@ h1 {
 .j-2 {
    position: absolute;
    color: white;
+   text-shadow: -3px 5px 4px #000000;
    width: 900px;
    top: calc(50% - 50px);
    left: calc(50% - 140px);
@@ -104,6 +111,7 @@ h1 {
 .a {
    position: absolute;
    color: white;
+   text-shadow: -3px 5px 4px #000000;
    width: 750px;
    top: calc(50% - 50px);
    left: calc(50% - 170px);
@@ -112,6 +120,7 @@ h1 {
 .y {
    position: absolute;
    color: white;
+   text-shadow: -3px 5px 4px #000000;
    width: 750px;
    top: calc(50% - 50px);
    left: calc(50% - 120px);
@@ -120,6 +129,7 @@ h1 {
 .m-2 {
    position: absolute;
    color: white;
+   text-shadow: -3px 5px 4px #000000;
    width: 750px;
    top: calc(50% - 55px);
    left: calc(50% - 80px);
@@ -128,6 +138,7 @@ h1 {
 .i-2 {
    position: absolute;
    color: white;
+   text-shadow: -3px 5px 4px #000000;
    width: 750px;
    top: calc(50% - 50px);
    left: calc(50% - 0px);
@@ -136,6 +147,7 @@ h1 {
 .e {
    position: absolute;
    color: white;
+   text-shadow: -3px 5px 4px #000000;
    width: 750px;
    top: calc(50% - 50px);
    left: calc(50% + 30px);
@@ -144,6 +156,7 @@ h1 {
 .R {
    position: absolute;
    color: white;
+   text-shadow: -3px 5px 4px #000000;
    width: 750px;
    top: calc(50% - 50px);
    left: calc(50% + 100px);
@@ -152,6 +165,7 @@ h1 {
 .e-2 {
    position: absolute;
    color: white;
+   text-shadow: -3px 5px 4px #000000;
    width: 750px;
    top: calc(50% - 50px);
    left: calc(50% + 150px);
@@ -160,6 +174,7 @@ h1 {
 .d {
    position: absolute;
    color: white;
+   text-shadow: -3px 5px 4px #000000;
    width: 750px;
    top: calc(50% - 50px);
    left: calc(50% + 200px);
@@ -168,6 +183,7 @@ h1 {
 .m-3 {
    position: absolute;
    color: white;
+   text-shadow: -3px 5px 4px #000000;
    width: 750px;
    top: calc(50% - 60px);
    left: calc(50% + 240px);
@@ -176,6 +192,7 @@ h1 {
 .a-2 {
    position: absolute;
    color: white;
+   text-shadow: -3px 5px 4px #000000;
    width: 750px;
    top: calc(50% - 50px);
    left: calc(50% + 320px);
@@ -184,6 +201,7 @@ h1 {
 .n {
    position: absolute;
    color: white;
+   text-shadow: -3px 5px 4px #000000;
    width: 750px;
    top: calc(50% - 50px);
    left: calc(50% + 370px);
@@ -192,6 +210,7 @@ h1 {
 .comma-3 {
    position: absolute;
    color: white;
+   text-shadow: -3px 5px 4px #000000;
    width: 750px;
    top: calc(50% - 50px);
    left: calc(50% + 430px);
@@ -200,6 +219,7 @@ h1 {
 .A {
    position: absolute;
    color: white;
+   text-shadow: -3px 5px 4px #000000;
    width: 750px;
    top: calc(50% + 50px);
    left: calc(50% - 460px);
@@ -208,6 +228,7 @@ h1 {
 .S {
    position: absolute;
    color: white;
+   text-shadow: -3px 5px 4px #000000;
    width: 750px;
    top: calc(50% + 50px);
    left: calc(50% - 360px);
@@ -216,6 +237,7 @@ h1 {
 .o {
    position: absolute;
    color: white;
+   text-shadow: -3px 5px 4px #000000;
    width: 750px;
    top: calc(50% + 50px);
    left: calc(50% - 310px);
@@ -224,6 +246,7 @@ h1 {
 .f {
    position: absolute;
    color: white;
+   text-shadow: -3px 5px 4px #000000;
    width: 750px;
    top: calc(50% + 50px);
    left: calc(50% - 260px);
@@ -232,6 +255,7 @@ h1 {
 .t {
    position: absolute;
    color: white;
+   text-shadow: -3px 5px 4px #000000;
    width: 750px;
    top: calc(50% + 50px);
    left: calc(50% - 220px);
@@ -240,6 +264,7 @@ h1 {
 .w {
    position: absolute;
    color: white;
+   text-shadow: -3px 5px 4px #000000;
    width: 750px;
    top: calc(50% + 50px);
    left: calc(50% - 185px);
@@ -248,6 +273,7 @@ h1 {
 .a-3 {
    position: absolute;
    color: white;
+   text-shadow: -3px 5px 4px #000000;
    width: 750px;
    top: calc(50% + 50px);
    left: calc(50% - 130px);
@@ -256,6 +282,7 @@ h1 {
 .r {
    position: absolute;
    color: white;
+   text-shadow: -3px 5px 4px #000000;
    width: 750px;
    top: calc(50% + 50px);
    left: calc(50% - 80px);
@@ -264,6 +291,7 @@ h1 {
 .e-3 {
    position: absolute;
    color: white;
+   text-shadow: -3px 5px 4px #000000;
    width: 750px;
    top: calc(50% + 50px);
    left: calc(50% - 40px);
@@ -272,6 +300,7 @@ h1 {
 .D {
    position: absolute;
    color: white;
+   text-shadow: -3px 5px 4px #000000;
    width: 750px;
    top: calc(50% + 50px);
    left: calc(50% + 60px);
@@ -280,6 +309,7 @@ h1 {
 .e-4 {
    position: absolute;
    color: white;
+   text-shadow: -3px 5px 4px #000000;
    width: 750px;
    top: calc(50% + 50px);
    left: calc(50% + 120px);
@@ -288,6 +318,7 @@ h1 {
 .v {
    position: absolute;
    color: white;
+   text-shadow: -3px 5px 4px #000000;
    width: 750px;
    top: calc(50% + 50px);
    left: calc(50% + 165px);
@@ -296,6 +327,7 @@ h1 {
 .e-5 {
    position: absolute;
    color: white;
+   text-shadow: -3px 5px 4px #000000;
    width: 750px;
    top: calc(50% + 50px);
    left: calc(50% + 210px);
@@ -304,6 +336,7 @@ h1 {
 .l {
    position: absolute;
    color: white;
+   text-shadow: -3px 5px 4px #000000;
    width: 750px;
    top: calc(50% + 50px);
    left: calc(50% + 250px);
@@ -312,6 +345,7 @@ h1 {
 .o-2 {
    position: absolute;
    color: white;
+   text-shadow: -3px 5px 4px #000000;
    width: 750px;
    top: calc(50% + 50px);
    left: calc(50% + 280px);
@@ -320,6 +354,7 @@ h1 {
 .p {
    position: absolute;
    color: white;
+   text-shadow: -3px 5px 4px #000000;
    width: 750px;
    top: calc(50% + 50px);
    left: calc(50% + 330px);
@@ -328,6 +363,7 @@ h1 {
 .e-6 {
    position: absolute;
    color: white;
+   text-shadow: -3px 5px 4px #000000;
    width: 750px;
    top: calc(50% + 50px);
    left: calc(50% + 380px);
@@ -336,6 +372,7 @@ h1 {
 .r-2 {
    position: absolute;
    color: white;
+   text-shadow: -3px 5px 4px #000000;
    width: 750px;
    top: calc(50% + 50px);
    left: calc(50% + 420px);
@@ -344,6 +381,7 @@ h1 {
 .period {
    position: absolute;
    color: white;
+   text-shadow: -3px 5px 4px #000000;
    width: 750px;
    top: calc(50% + 50px);
    left: calc(50% + 470px);
@@ -435,6 +473,7 @@ nav {
    color: rgb(255, 255, 255);
    text-align: center;
    z-index: 100;
+   cursor: pointer;
 }
 
 svg {
