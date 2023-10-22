@@ -1,9 +1,13 @@
 import { gsap } from "gsap";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 const Navbar = () => {
+   const [isAutoScrolling, setIsAutoScrolling] = useState(false);
+
+   // Define a state variable to disable buttons
+   const [disableButtons, setDisableButtons] = useState(false);
+
    useEffect(() => {
-      // Initialize your animations and event listeners here
       const container = document.getElementById("nav-container");
       const svg = container.querySelector("svg");
       const circle1 = svg.querySelectorAll("circle")[0];
@@ -21,7 +25,7 @@ const Navbar = () => {
             tl1.to(circle1, {
                x: 100 * index,
                duration: 0.25,
-               ease: "sine.ease",
+               ease: "sine.inOut",
             });
             tl1.to(
                circle1,
@@ -29,7 +33,7 @@ const Navbar = () => {
                   scaleX: 2.1,
                   scaleY: 0.8,
                   duration: 0.25,
-                  ease: "sine.ease",
+                  ease: "sine.inOut",
                },
                0
             );
@@ -37,14 +41,14 @@ const Navbar = () => {
                scaleX: 1,
                scaleY: 1,
                duration: 0.25,
-               ease: "sine.ease",
+               ease: "sine.inOut",
             });
             tl2.to(
                circle2,
                {
                   x: 100 * index,
                   duration: 0.3,
-                  ease: "sine.ease",
+                  ease: "sine.inOut",
                },
                0
             );
@@ -54,7 +58,7 @@ const Navbar = () => {
                   scaleX: 2.1,
                   scaleY: 0.8,
                   duration: 0.3,
-                  ease: "sine.ease",
+                  ease: "sine.inOut",
                },
                0
             );
@@ -62,7 +66,7 @@ const Navbar = () => {
                scaleX: 1,
                scaleY: 1,
                duration: 0.3,
-               ease: "sine.ease",
+               ease: "sine.inOut",
             });
 
             tl1.play();
@@ -74,6 +78,15 @@ const Navbar = () => {
 
       // Function to handle scrolling to a section
       const scrollToSection = (sectionId) => {
+         if (isAutoScrolling) {
+            // Ignore scrolling if auto-scrolling is in progress
+            return;
+         }
+
+         setIsAutoScrolling(true);
+         // Disable buttons during auto-scrolling
+         setDisableButtons(true);
+
          const section = document.getElementById(sectionId);
 
          if (section) {
@@ -101,6 +114,12 @@ const Navbar = () => {
             }
 
             requestAnimationFrame(scrollAnimation);
+
+            setTimeout(() => {
+               setIsAutoScrolling(false);
+               // Re-enable buttons after auto-scrolling is finished
+               setDisableButtons(false);
+            }, duration);
          }
       };
 
@@ -110,20 +129,61 @@ const Navbar = () => {
       buttons.forEach((button) => {
          button.addEventListener("click", (e) => {
             const sectionId = e.target.dataset.section;
+
             scrollToSection(sectionId);
          });
       });
-   }, []);
+
+      // Define an array to store the top positions of each section
+      const sectionTops = Array.from(navlinks).map((link) => {
+         const sectionId = link.dataset.section;
+         const section = document.getElementById(sectionId);
+         return section.offsetTop;
+      });
+
+      // Function to update circle positions
+      const updateCirclePositions = () => {
+         if (!isAutoScrolling) {
+            const scrollPosition = window.scrollY;
+
+            let closestSectionIndex = 0;
+
+            for (let i = 0; i < sectionTops.length; i++) {
+               if (
+                  Math.abs(sectionTops[i] - scrollPosition) <
+                  Math.abs(sectionTops[closestSectionIndex] - scrollPosition)
+               ) {
+                  closestSectionIndex = i;
+               }
+            }
+
+            let targetX = closestSectionIndex * 100;
+
+            const threshold = sectionTops[closestSectionIndex];
+
+            if (scrollPosition >= threshold) {
+               gsap.to(circle1, { x: targetX, duration: 0.25, ease: "sine.inOut" });
+               gsap.to(circle2, { x: targetX, duration: 0.25, ease: "sine.inOut" });
+            }
+         }
+      };
+
+      window.addEventListener("scroll", updateCirclePositions);
+
+      return () => {
+         window.removeEventListener("scroll", updateCirclePositions);
+      };
+   }, [isAutoScrolling]);
 
    useEffect(() => {
       gsap.set(".nav", { opacity: 0 });
       gsap.to(".nav", {
          opacity: 1,
          duration: 5,
-         delay: 6,
+         delay: 0,
          ease: "power1.out",
       });
-   });
+   }, []);
 
    return (
       <nav className="nav flex top-0 right-0 fixed justify-end items-center text-black pr-96 pt-6 z-50">
@@ -158,6 +218,7 @@ const Navbar = () => {
                      <button
                         className="nav-links"
                         data-section="home"
+                        disabled={disableButtons} // Disable button if disableButtons is true
                      >
                         Home
                      </button>
@@ -166,6 +227,7 @@ const Navbar = () => {
                      <button
                         className="nav-links"
                         data-section="work"
+                        disabled={disableButtons} // Disable button if disableButtons is true
                      >
                         Work
                      </button>
@@ -174,6 +236,7 @@ const Navbar = () => {
                      <button
                         className="nav-links"
                         data-section="about"
+                        disabled={disableButtons} // Disable button if disableButtons is true
                      >
                         About
                      </button>
@@ -182,6 +245,7 @@ const Navbar = () => {
                      <button
                         className="nav-links"
                         data-section="contact"
+                        disabled={disableButtons} // Disable button if disableButtons is true
                      >
                         Contact
                      </button>
