@@ -2,6 +2,7 @@ import gsap from "gsap";
 import { useEffect } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
+import StartAnimation from "./components/StartAnimation";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Home from "./pages/Home";
@@ -148,6 +149,8 @@ function App() {
 
    return (
       <>
+         <StartAnimation />
+
          <div className="all-pages">
             <Navbar />
             <section
