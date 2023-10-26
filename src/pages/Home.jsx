@@ -88,7 +88,7 @@ const Work = () => {
       <>
          <div className="mt-0 mb-0 pt-0 pb-0 flex flex-col items-center justify-center h-screen">
             <div>
-               <div className="up">
+               <div className="up z-50">
                   <p
                      data-speedx="0.005"
                      data-speedy="0.005"
@@ -435,19 +435,22 @@ const Work = () => {
                   </p>
                </div>
             </div>
-            <div className="flex">
-               <img
-                  height="400"
-                  width="300"
-                  src="img/j.png"
-                  className="parallax j"
-                  alt=""
-                  ref={imgRef}
-               />
-            </div>
+            <section className="flex">
+               <div className="images">
+                  <img
+                     height="400"
+                     width="300"
+                     src="img/j.png"
+                     className="parallax animate j"
+                     alt=""
+                     ref={imgRef}
+                     style={{ "--i": 0 }}
+                  />
+               </div>
+            </section>
          </div>
          <div className="scroll-down">
-            <p className="absolute bottom-5 left-0 right-10 text-center text-white">Scroll Down</p>
+            <p className="absolute bottom-5 left-0 right-10 text-center text-white z-50">Scroll Down</p>
             <p className="arrow absolute bottom-6 left-20 right-0 text-center text-white">↓</p>
          </div>
       </>

@@ -36,7 +36,7 @@ const About = () => {
                      x: -1400,
                      y: -230,
                      scrollTrigger: {
-                        start: "2050px",
+                        start: "1900px",
                         end: "2500px",
                         scrub: 1,
                      },

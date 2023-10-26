@@ -7,8 +7,44 @@ body {
    margin: 0;
    overflow-x: hidden;
    height: 100vh;
-   background: linear-gradient(to bottom right, #4500c4, #dd00ce);
    scrollbar-color: #313131;
+}
+
+.home-section {
+   height: 100vh;
+   background: linear-gradient(to bottom right, #dd00ce, #4500c4);
+}
+
+.all-pages {
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   opacity: 1;
+   z-index: 1;
+}
+
+.work-section {
+   height: 100vh;
+   background-color: #313131;
+   transition: background-color 2s ease-in-out;
+}
+.about-section {
+   height: 100vh;
+   background-color: #313131;
+
+   transition: background-color 2s ease-in-out;
+}
+.contact-section {
+   height: 100vh;
+   background-color: #313131;
+
+   transition: background-color 2s ease-in-out;
+}
+
+svg circle {
+   fill: rgba(255, 255, 255, 0.961);
+   z-index: 99;
+   left: 100px;
 }
 
 html {
@@ -39,12 +75,16 @@ h1 {
    top: -100px;
 }
 
-.j {
+section .j {
    position: absolute;
    width: 350px;
    top: calc(50%);
    left: calc(50% + 210px);
    transform: translate(-50%, -50%);
+}
+
+section.show-animate .animate {
+   filter: blur(0);
 }
 
 .h {
@@ -420,43 +460,6 @@ h1 {
    top: 0;
 }
 
-.all-pages {
-   position: absolute;
-   height: 100%;
-   width: 100%;
-   opacity: 1;
-   z-index: 1;
-}
-
-.home-section {
-   height: 100vh;
-   background: linear-gradient(to bottom right, #dd00ce, #4500c4);
-}
-
-.work-section {
-   height: 100vh;
-   background-color: #313131;
-   transition: background-color 2s ease-in-out;
-}
-.about-section {
-   height: 100vh;
-   background-color: #313131;
-
-   transition: background-color 2s ease-in-out;
-}
-.contact-section {
-   height: 100vh;
-   background-color: #313131;
-
-   transition: background-color 2s ease-in-out;
-}
-
-svg circle {
-   fill: rgba(255, 255, 255, 0.961);
-   z-index: 99;
-   left: 100px;
-}
-
 #nav-container {
    position: relative;
 }
@@ -492,7 +495,10 @@ svg {
    width: 700px;
 }
 
-/* Define a CSS class for hiding overflow */
-.hide-overflow {
-   overflow: hidden;
+.scroll-down {
+   z-index: 50;
+}
+
+.start {
+   background: linear-gradient(to bottom right, #4500c4, #dd00ce);
 }

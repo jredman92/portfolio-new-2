@@ -134,7 +134,7 @@ const Navbar = () => {
          });
       });
 
-      // Define an array to store the top positions of each section
+      // Array to store the top positions of each section
       const sectionTops = Array.from(navlinks).map((link) => {
          const sectionId = link.dataset.section;
          const section = document.getElementById(sectionId);
@@ -218,7 +218,7 @@ const Navbar = () => {
                      <button
                         className="nav-links"
                         data-section="home"
-                        disabled={disableButtons} // Disable button if disableButtons is true
+                        disabled={disableButtons}
                      >
                         Home
                      </button>
@@ -227,7 +227,7 @@ const Navbar = () => {
                      <button
                         className="nav-links"
                         data-section="work"
-                        disabled={disableButtons} // Disable button if disableButtons is true
+                        disabled={disableButtons}
                      >
                         Work
                      </button>
@@ -236,7 +236,7 @@ const Navbar = () => {
                      <button
                         className="nav-links"
                         data-section="about"
-                        disabled={disableButtons} // Disable button if disableButtons is true
+                        disabled={disableButtons}
                      >
                         About
                      </button>
@@ -245,7 +245,7 @@ const Navbar = () => {
                      <button
                         className="nav-links"
                         data-section="contact"
-                        disabled={disableButtons} // Disable button if disableButtons is true
+                        disabled={disableButtons}
                      >
                         Contact
                      </button>

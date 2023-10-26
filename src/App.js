@@ -9,24 +9,22 @@ import Home from "./pages/Home";
 import Work from "./pages/Work";
 
 function App() {
-   useEffect(() => {
-      // Add the CSS class to the body to hide overflow during animation
-      document.body.classList.add("hide-overflow");
+   // useEffect(() => {
+   //    document.body.classList.add("hide-overflow");
 
-      // Animate the "all-pages" element to fade in on page load
-      const animation = gsap.to(".all-pages", {
-         opacity: 1,
-         duration: 1.9,
-         delay: 1.2,
-         ease: "power1.in",
-      });
+   //    const animation = gsap.to(".all-pages", {
+   //       opacity: 1,
+   //       duration: 1.9,
+   //       delay: 1.2,
+   //       ease: "power1.in",
+   //    });
 
-      // Remove the CSS class and clear the animation onComplete
-      animation.eventCallback("onComplete", () => {
-         document.body.classList.remove("hide-overflow");
-         animation.kill(); // Stop the animation if it's not already completed
-      });
-   }, []);
+   //    // Remove the CSS class and clear animation onComplete
+   //    animation.eventCallback("onComplete", () => {
+   //       document.body.classList.remove("hide-overflow");
+   //       animation.kill(); // Stop the animation if it's not already completed
+   //    });
+   // }, []);
 
    useEffect(() => {
       const parallax_el = document.querySelectorAll(".parallax");
@@ -150,33 +148,34 @@ function App() {
    return (
       <>
          <StartAnimation />
-
-         <div className="all-pages">
-            <Navbar />
-            <section
-               className="home-section"
-               id="home"
-            >
-               {<Home />}
-            </section>
-            <section
-               className="work-section"
-               id="work"
-            >
-               {<Work />}
-            </section>
-            <section
-               className="about-section"
-               id="about"
-            >
-               {<About />}
-            </section>
-            <section
-               className="contact-section"
-               id="contact"
-            >
-               {<Contact />}
-            </section>
+         <div className="start-screen">
+            <div className="all-pages">
+               <Navbar />
+               <section
+                  className="home-section"
+                  id="home"
+               >
+                  {<Home />}
+               </section>
+               <section
+                  className="work-section"
+                  id="work"
+               >
+                  {<Work />}
+               </section>
+               <section
+                  className="about-section"
+                  id="about"
+               >
+                  {<About />}
+               </section>
+               <section
+                  className="contact-section"
+                  id="contact"
+               >
+                  {<Contact />}
+               </section>
+            </div>
          </div>
       </>
    );
