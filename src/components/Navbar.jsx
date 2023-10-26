@@ -175,18 +175,18 @@ const Navbar = () => {
       };
    }, [isAutoScrolling]);
 
-   useEffect(() => {
-      gsap.set(".nav", { opacity: 0 });
-      gsap.to(".nav", {
-         opacity: 1,
-         duration: 5,
-         delay: 3,
-         ease: "power1.out",
-      });
-   }, []);
+   // useEffect(() => {
+   //    gsap.set(".nav", { opacity: 0 });
+   //    gsap.to(".nav", {
+   //       opacity: 1,
+   //       duration: 5,
+   //       delay: 3,
+   //       ease: "power1.out",
+   //    });
+   // }, []);
 
    return (
-      <nav className="nav flex top-0 right-0 fixed justify-end items-center text-black pr-96 pt-6 z-50">
+      <nav className="nav flex top-0 right-0 fixed justify-end items-center text-black pr-96 z-50">
          <div id="nav-container">
             <svg
                width="430"

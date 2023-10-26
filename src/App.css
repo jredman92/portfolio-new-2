@@ -10,9 +10,43 @@ body {
    scrollbar-color: #313131;
 }
 
+.name-container {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.first-name,
+.last-name {
+   opacity: 0;
+   font-size: 3em;
+   transition: all 0.5s ease;
+   animation: nameAnimation 4s linear infinite alternate;
+}
+
+@keyframes nameAnimation {
+   0%,
+   100% {
+      transform: translateY(0);
+      opacity: 0;
+   }
+   50% {
+      transform: translateY(-100%);
+      opacity: 1;
+   }
+}
+
 .home-section {
    height: 100vh;
-   background: linear-gradient(to bottom right, #dd00ce, #4500c4);
+   background: linear-gradient(to bottom right, #00eefa, #ff11ff);
+}
+
+.start {
+   background: linear-gradient(to bottom right, #ff11ff, #00eefa);
 }
 
 .all-pages {
@@ -497,8 +531,4 @@ svg {
 
 .scroll-down {
    z-index: 50;
-}
-
-.start {
-   background: linear-gradient(to bottom right, #4500c4, #dd00ce);
 }

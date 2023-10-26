@@ -449,8 +449,8 @@ const Work = () => {
                </div>
             </section>
          </div>
-         <div className="scroll-down">
-            <p className="absolute bottom-5 left-0 right-10 text-center text-white z-50">Scroll Down</p>
+         <div className="scroll-down z-50">
+            <p className="absolute bottom-5 left-0 right-10 text-center text-white">Scroll Down</p>
             <p className="arrow absolute bottom-6 left-20 right-0 text-center text-white">↓</p>
          </div>
       </>

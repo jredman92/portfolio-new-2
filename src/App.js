@@ -1,4 +1,3 @@
-import gsap from "gsap";
 import { useEffect } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
@@ -9,23 +8,6 @@ import Home from "./pages/Home";
 import Work from "./pages/Work";
 
 function App() {
-   // useEffect(() => {
-   //    document.body.classList.add("hide-overflow");
-
-   //    const animation = gsap.to(".all-pages", {
-   //       opacity: 1,
-   //       duration: 1.9,
-   //       delay: 1.2,
-   //       ease: "power1.in",
-   //    });
-
-   //    // Remove the CSS class and clear animation onComplete
-   //    animation.eventCallback("onComplete", () => {
-   //       document.body.classList.remove("hide-overflow");
-   //       animation.kill(); // Stop the animation if it's not already completed
-   //    });
-   // }, []);
-
    useEffect(() => {
       const parallax_el = document.querySelectorAll(".parallax");
       let xValue = 0,
@@ -90,57 +72,38 @@ function App() {
       });
    }, []);
 
-   // const handleScroll = () => {
-   //    const homeSection = document.getElementById("home");
-   //    const workSection = document.getElementById("work");
-   //    const aboutSection = document.getElementById("about");
-   //    const contactSection = document.getElementById("contact");
-   //    const scrollPosition = window.scrollY;
-   //    const homeSectionHeight = homeSection.offsetHeight;
-   //    const workSectionHeight = workSection.offsetHeight;
-   //    const aboutSectionHeight = aboutSection.offsetHeight;
-   //    const workSectionStart = homeSectionHeight;
-   //    const aboutSectionStart = workSectionStart + workSectionHeight;
-   //    const contactSectionStart = aboutSectionStart + aboutSectionHeight;
-
-   //    if (scrollPosition < workSectionStart) {
-   //       const t = scrollPosition / workSectionStart;
-   //       const r = Math.round(255 - t * 100);
-   //       const g = 100;
-   //       const b = Math.round(150 + t * 100);
-   //       homeSection.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
-   //    } else {
-   //       homeSection.style.backgroundColor = ""; // Clear the background color
-   //    }
-
-   //    if (scrollPosition >= workSectionStart && scrollPosition < aboutSectionStart) {
-   //       const t = (scrollPosition - workSectionStart) / (aboutSectionStart - workSectionStart);
-   //       workSection.style.backgroundColor = `rgb(255, ${Math.round(100 + t * 100)}, ${Math.round(200 - t * 100)})`;
-   //    } else {
-   //       workSection.style.backgroundColor = ""; // Clear the background color
-   //    }
-
-   //    if (scrollPosition >= aboutSectionStart && scrollPosition < contactSectionStart) {
-   //       const t = (scrollPosition - aboutSectionStart) / (contactSectionStart - aboutSectionStart);
-   //       aboutSection.style.backgroundColor = `rgb(255, ${Math.round(0 + t * 100)}, ${Math.round(150 + t * 100)})`;
-   //    } else {
-   //       aboutSection.style.backgroundColor = ""; // Clear the background color
-   //    }
-
-   //    if (scrollPosition >= contactSectionStart) {
-   //       const t = (scrollPosition - contactSectionStart) / contactSection.offsetHeight;
-   //       contactSection.style.backgroundColor = `rgb(211, ${Math.round(100 - t * 200)}, ${Math.round(200 + t * 100)})`;
-   //    } else {
-   //       contactSection.style.backgroundColor = ""; // Clear the background color
-   //    }
-   // };
-
    // useEffect(() => {
-   //    // Attach the scroll event listener
+   //    const sections = [
+   //       { id: "home", colorStart: [255, 100, 150], colorEnd: [255, 100, 150] },
+   //       { id: "work", colorStart: [255, 100, 150], colorEnd: [200, 200, 100] },
+   //       { id: "about", colorStart: [200, 200, 100], colorEnd: [0, 255, 0] },
+   //       { id: "contact", colorStart: [0, 255, 0], colorEnd: [0, 0, 255] },
+   //    ];
+
+   //    const handleScroll = () => {
+   //       const scrollPosition = window.scrollY;
+
+   //       sections.forEach((section) => {
+   //          const el = document.getElementById(section.id);
+   //          const { colorStart, colorEnd } = section;
+   //          const sectionStart = el.offsetTop;
+   //          const sectionHeight = el.offsetHeight;
+
+   //          if (scrollPosition >= sectionStart && scrollPosition < sectionStart + sectionHeight) {
+   //             const t = (scrollPosition - sectionStart) / sectionHeight;
+   //             const r = Math.round(colorStart[0] + t * (colorEnd[0] - colorStart[0]));
+   //             const g = Math.round(colorStart[1] + t * (colorEnd[1] - colorStart[1]));
+   //             const b = Math.round(colorStart[2] + t * (colorEnd[2] - colorStart[2]));
+   //             el.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+   //          } else {
+   //             el.style.backgroundColor = "";
+   //          }
+   //       });
+   //    };
+
    //    window.addEventListener("scroll", handleScroll);
 
    //    return () => {
-   //       // Remove the event listener when the component unmounts
    //       window.removeEventListener("scroll", handleScroll);
    //    };
    // }, []);
