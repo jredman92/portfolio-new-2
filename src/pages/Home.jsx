@@ -8,72 +8,184 @@ const Work = () => {
    gsap.registerPlugin(SplitTextJS);
 
    useEffect(() => {
-      let animation = gsap.timeline({ repeat: -1 });
-      let targets = document.querySelectorAll(".text-wrapper p");
-      let numberOfTargets = targets.length;
+      const titles = gsap.utils.toArray(".text-wrapper p");
+      const tl = gsap.timeline({ repeat: -1, repeatDelay: 0.7 });
 
-      let duration = 0.5;
-      let pause = 1;
-      let stagger = duration + pause;
-      let repeatDelay = duration * (numberOfTargets - 1) + pause;
-
-      gsap.set(".text-wrapper", { autoAlpha: 1 });
-      animation
-         .from(targets, {
-            y: 80,
-            duration: duration,
-            opacity: 0,
-            stagger: {
-               each: 2,
-               repeat: -1,
-               repeatDelay: repeatDelay,
-            },
-         })
-         .to(
-            targets,
+      titles.forEach((title) => {
+         const splitTitle = new SplitTextJS(title);
+         tl.from(
+            splitTitle.chars,
             {
-               y: -80,
-               duration: duration,
                opacity: 0,
-               stagger: {
-                  each: 2,
-                  repeat: -1,
-                  repeatDelay: repeatDelay,
-               },
+               y: 80,
+               rotateX: -90,
+               stagger: 0.02,
+               duration: 1,
             },
-            stagger
+            "<"
+         ).to(
+            splitTitle.chars,
+            {
+               opacity: 0,
+               y: -80,
+               rotateX: 90,
+               stagger: 0.02,
+               duration: 1,
+               delay: 1,
+            },
+            "<1"
          );
+      });
    }, []);
 
-   // useEffect(() => {
-   //    const element = document.querySelector(".something");
-   //    const tl = gsap.timeline({ repeat: -1, repeatDelay: 0.7 });
+   useEffect(() => {
+      const element = document.querySelector(".something");
+      const tl = gsap.timeline();
 
-   //    const lastTitle = new SplitTextJS(element);
-   //    tl.from(
-   //       lastTitle.chars,
-   //       {
-   //          opacity: 0,
-   //          y: 80,
-   //          rotateX: -90,
-   //          stagger: 0.02,
-   //          duration: 0.7,
-   //          delay: 10,
-   //       },
-   //       "<"
-   //    ).to(
-   //       lastTitle.chars,
-   //       {
-   //          opacity: 0,
-   //          y: -80,
-   //          rotateX: 90,
-   //          stagger: 0.02,
-   //          duration: 1,
-   //          delay: 1,
-   //       },
-   //       "<1"
-   //    );
-   // }, []);
+      const lastTitle = new SplitTextJS(element);
+      tl.from(
+         lastTitle.chars,
+         {
+            opacity: 0,
+            y: 80,
+            rotateX: -90,
+            stagger: 0.02,
+            duration: 1,
+            delay: 10.1,
+         },
+         "<"
+      ).to(
+         lastTitle.chars,
+         {
+            opacity: 0,
+            y: -80,
+            rotateX: 90,
+            stagger: 0.02,
+            duration: 1,
+            delay: 1,
+         },
+         "<1"
+      );
+   }, []);
+
+   useEffect(() => {
+      const element2 = document.querySelector(".something-2");
+      const tl = gsap.timeline();
+
+      const lastTitle = new SplitTextJS(element2);
+      tl.from(
+         lastTitle.chars,
+         {
+            opacity: 0,
+            y: 80,
+            rotateX: -90,
+            stagger: 0.02,
+            duration: 1,
+            delay: 22.1,
+         },
+         "<"
+      ).to(
+         lastTitle.chars,
+         {
+            opacity: 0,
+            y: -80,
+            rotateX: 90,
+            stagger: 0.02,
+            duration: 1,
+            delay: 1,
+         },
+         "<1"
+      );
+   }, []);
+
+   useEffect(() => {
+      const element3 = document.querySelector(".something-3");
+      const tl = gsap.timeline();
+
+      const lastTitle = new SplitTextJS(element3);
+      tl.from(
+         lastTitle.chars,
+         {
+            opacity: 0,
+            y: 80,
+            rotateX: -90,
+            stagger: 0.02,
+            duration: 1,
+            delay: 34.2,
+         },
+         "<"
+      ).to(
+         lastTitle.chars,
+         {
+            opacity: 0,
+            y: -80,
+            rotateX: 90,
+            stagger: 0.02,
+            duration: 1,
+            delay: 1,
+         },
+         "<1"
+      );
+   }, []);
+
+   useEffect(() => {
+      const element3 = document.querySelector(".something-4");
+      const tl = gsap.timeline();
+
+      const lastTitle = new SplitTextJS(element3);
+      tl.from(
+         lastTitle.chars,
+         {
+            opacity: 0,
+            y: 80,
+            rotateX: -90,
+            stagger: 0.02,
+            duration: 1,
+            delay: 46.3,
+         },
+         "<"
+      ).to(
+         lastTitle.chars,
+         {
+            opacity: 0,
+            y: -80,
+            rotateX: 90,
+            stagger: 0.02,
+            duration: 1,
+            delay: 1,
+         },
+         "<1"
+      );
+   }, []);
+   useEffect(() => {
+      const element3 = document.querySelector(".something-5");
+      const tl = gsap.timeline();
+
+      const lastTitle = new SplitTextJS(element3);
+      tl.from(
+         lastTitle.chars,
+         {
+            opacity: 0,
+            y: 80,
+            rotateX: -90,
+            stagger: 0.02,
+            duration: 1,
+            delay: 68.4,
+         },
+         "<"
+      ).to(
+         lastTitle.chars,
+         {
+            opacity: 0,
+            y: -80,
+            rotateX: 90,
+            stagger: 0.02,
+            duration: 1,
+            delay: 1,
+         },
+         "<1"
+      );
+   }, []);
 
    // useEffect(() => {
    //    gsap.fromTo(
@@ -91,7 +203,7 @@ const Work = () => {
    //             gsap.to(".up", {
    //                scrollTrigger: {
    //                   start: "0px",
-   //                   end: "50px",
+   //                   end: "10px",
    //                   scrub: 1,
    //                },
 
@@ -127,7 +239,7 @@ const Work = () => {
 
    return (
       <>
-         <div className="flex items-center h-screen w-screen">
+         <div className="flex items-center">
             <div className="intro relative left-10">
                <p>Hi, I'm Jaymie!</p>
                <br />
@@ -144,8 +256,15 @@ const Work = () => {
                      <p className="text-left">skateboarder.</p>
                      <p className="text-left">recording artist.</p>
                      <p className="text-left">culinary enthusiast.</p>
+                     {/* <p className="text-left">faggot.</p> */}
                   </div>
-                  <div>{/* <p className="text-left something absolute left-48">something.</p> */}</div>
+                  <div>
+                     <p className="text-left something absolute left-48">something.</p>
+                     <p className="text-left something-2 absolute left-48">something.</p>
+                     <p className="text-left something-3 absolute left-48">something.</p>
+                     <p className="text-left something-4 absolute left-48">something.</p>
+                     <p className="text-left something-5 absolute left-48">something.</p>
+                  </div>
                </div>
             </div>
          </div>
