@@ -8,13 +8,14 @@
       "@testing-library/user-event": "^13.5.0",
       "autoprefixer": "^10.4.16",
       "boxicons": "^2.1.4",
-      "gsap": "^3.7.1",
+      "gsap": "npm:@gsap/shockingly@^3.12.2",
       "postcss": "^8.4.31",
       "react": "^18.2.0",
       "react-dom": "^18.2.0",
       "react-router-dom": "^6.16.0",
       "react-scripts": "5.0.1",
       "react-scroll": "^1.9.0",
+      "split-text-js": "^1.0.3",
       "web-vitals": "^2.1.4"
    },
    "scripts": {
@@ -43,6 +44,8 @@
    },
    "devDependencies": {
       "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+      "postcss-nested": "^6.0.1",
+      "postcss-nesting": "^12.0.1",
       "tailwindcss": "^3.3.3"
    }
 }

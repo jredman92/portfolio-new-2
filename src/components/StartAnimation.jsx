@@ -1,8 +1,27 @@
 import gsap from "gsap";
+import ScrambleTextPlugin from "gsap/ScrambleTextPlugin";
+import GSDevTools from "gsap/src/GSDevTools";
 import React, { useEffect, useRef } from "react";
 
 const StartAnimation = () => {
    const startContainer = useRef(null);
+   gsap.registerPlugin(GSDevTools);
+   gsap.registerPlugin(ScrambleTextPlugin);
+
+   useEffect(() => {
+      var tl = gsap.timeline({ defaults: { duration: 5, ease: "none" } });
+
+      tl.to("#newClass", {
+         scrambleText: {
+            text: "WELCOME TO MY PORTFOLIO",
+            chars: "01",
+            speed: 1,
+            newClass: "orange",
+            revealDelay: 0.5,
+            tweenLength: false,
+         },
+      });
+   }, []);
 
    useEffect(() => {
       gsap.fromTo(
@@ -12,7 +31,7 @@ const StartAnimation = () => {
          },
          {
             opacity: 0,
-            delay: 3,
+            delay: 0,
             onComplete: () => {
                startContainer.current.remove();
             },
@@ -23,9 +42,11 @@ const StartAnimation = () => {
    return (
       <div
          ref={startContainer}
-         className="start fixed w-screen h-screen z-10"
+         className="start fixed flex w-screen h-screen justify-center items-center z-10"
       >
-         <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">StartAnimation</div>
+         <div id="textblock">
+            <div id="newClass"></div>
+         </div>
       </div>
    );
 };

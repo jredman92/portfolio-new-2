@@ -8,6 +8,7 @@ body {
    overflow-x: hidden;
    height: 100vh;
    scrollbar-color: #313131;
+   background-color: #1d1d1d;
 }
 
 .name-container {
@@ -20,33 +21,57 @@ body {
    align-items: center;
 }
 
-.first-name,
-.last-name {
-   opacity: 0;
-   font-size: 3em;
-   transition: all 0.5s ease;
-   animation: nameAnimation 4s linear infinite alternate;
+#textblock {
+   height: 140px;
+   font-family: Signika Negative, sans-serif;
+   font-weight: 300;
+   color: #989898;
+   padding: 10px;
+   font-size: 3vw;
+   line-height: 1.4;
 }
 
-@keyframes nameAnimation {
-   0%,
-   100% {
-      transform: translateY(0);
-      opacity: 0;
-   }
-   50% {
-      transform: translateY(-100%);
-      opacity: 1;
-   }
+.orange {
+   color: #f60;
+}
+
+.intro p {
+   font-size: 5rem;
+   color: white;
+   margin: 0;
+   line-height: 0;
+}
+
+.text-wrapper p {
+   font-size: 5rem;
+   color: white;
+   line-height: 0;
+}
+
+.text-wrapper p:nth-of-type(1) {
+   color: rgb(124, 255, 251);
+}
+.text-wrapper p:nth-of-type(2) {
+   color: rgb(133, 255, 133);
+}
+.text-wrapper p:nth-of-type(3) {
+   color: rgb(129, 129, 255);
+}
+.text-wrapper p:nth-of-type(4) {
+   color: rgb(255, 127, 255);
+}
+
+.text-wrapper p:nth-of-type(5) {
+   color: rgb(255, 255, 127);
 }
 
 .home-section {
    height: 100vh;
-   background: linear-gradient(to bottom right, #00eefa, #ff11ff);
+   background: linear-gradient(to bottom right, #8c8c8c, #2a2a2a);
 }
 
 .start {
-   background: linear-gradient(to bottom right, #ff11ff, #00eefa);
+   background: linear-gradient(to bottom right, #2a2a2a, #8c8c8c);
 }
 
 .all-pages {
@@ -109,364 +134,8 @@ h1 {
    top: -100px;
 }
 
-section .j {
-   position: absolute;
-   width: 350px;
-   top: calc(50%);
-   left: calc(50% + 210px);
-   transform: translate(-50%, -50%);
-}
-
 section.show-animate .animate {
    filter: blur(0);
-}
-
-.h {
-   position: absolute;
-   color: white;
-   text-shadow: -3px 5px 4px #000000;
-   width: 350px;
-   top: calc(50% - 149px);
-   left: calc(50% - 300px);
-   transform: translate(-50%, -50%);
-}
-
-.i-1 {
-   position: absolute;
-   color: white;
-   text-shadow: -3px 5px 4px #000000;
-   width: 350px;
-   top: calc(50% - 145px);
-   left: calc(50% - 240px);
-   transform: translate(-50%, -50%);
-}
-
-.comma {
-   position: absolute;
-   color: white;
-   text-shadow: -3px 5px 4px #000000;
-   width: 350px;
-   top: calc(50% - 150px);
-   left: calc(50% - 200px);
-   transform: translate(-50%, -50%);
-}
-
-.I {
-   position: absolute;
-   color: white;
-   text-shadow: -3px 5px 4px #000000;
-   width: 350px;
-   top: calc(50% - 50px);
-   left: calc(50% - 600px);
-   transform: translate(-50%, -50%);
-}
-.comma-2 {
-   position: absolute;
-   color: white;
-   text-shadow: -3px 5px 4px #000000;
-   width: 350px;
-   top: calc(50% - 60px);
-   left: calc(50% - 570px);
-   transform: translate(-50%, -50%);
-}
-.m {
-   position: absolute;
-   color: white;
-   text-shadow: -3px 5px 4px #000000;
-   width: 350px;
-   top: calc(50% - 50px);
-   left: calc(50% - 550px);
-   transform: translate(-50%, -50%);
-}
-
-.j-2 {
-   position: absolute;
-   color: white;
-   text-shadow: -3px 5px 4px #000000;
-   width: 900px;
-   top: calc(50% - 50px);
-   left: calc(50% - 140px);
-   transform: translate(-50%, -50%);
-}
-
-.a {
-   position: absolute;
-   color: white;
-   text-shadow: -3px 5px 4px #000000;
-   width: 750px;
-   top: calc(50% - 50px);
-   left: calc(50% - 170px);
-   transform: translate(-50%, -50%);
-}
-.y {
-   position: absolute;
-   color: white;
-   text-shadow: -3px 5px 4px #000000;
-   width: 750px;
-   top: calc(50% - 50px);
-   left: calc(50% - 120px);
-   transform: translate(-50%, -50%);
-}
-.m-2 {
-   position: absolute;
-   color: white;
-   text-shadow: -3px 5px 4px #000000;
-   width: 750px;
-   top: calc(50% - 55px);
-   left: calc(50% - 80px);
-   transform: translate(-50%, -50%);
-}
-.i-2 {
-   position: absolute;
-   color: white;
-   text-shadow: -3px 5px 4px #000000;
-   width: 750px;
-   top: calc(50% - 50px);
-   left: calc(50% - 0px);
-   transform: translate(-50%, -50%);
-}
-.e {
-   position: absolute;
-   color: white;
-   text-shadow: -3px 5px 4px #000000;
-   width: 750px;
-   top: calc(50% - 50px);
-   left: calc(50% + 30px);
-   transform: translate(-50%, -50%);
-}
-.R {
-   position: absolute;
-   color: white;
-   text-shadow: -3px 5px 4px #000000;
-   width: 750px;
-   top: calc(50% - 50px);
-   left: calc(50% + 100px);
-   transform: translate(-50%, -50%);
-}
-.e-2 {
-   position: absolute;
-   color: white;
-   text-shadow: -3px 5px 4px #000000;
-   width: 750px;
-   top: calc(50% - 50px);
-   left: calc(50% + 150px);
-   transform: translate(-50%, -50%);
-}
-.d {
-   position: absolute;
-   color: white;
-   text-shadow: -3px 5px 4px #000000;
-   width: 750px;
-   top: calc(50% - 50px);
-   left: calc(50% + 200px);
-   transform: translate(-50%, -50%);
-}
-.m-3 {
-   position: absolute;
-   color: white;
-   text-shadow: -3px 5px 4px #000000;
-   width: 750px;
-   top: calc(50% - 60px);
-   left: calc(50% + 240px);
-   transform: translate(-50%, -50%);
-}
-.a-2 {
-   position: absolute;
-   color: white;
-   text-shadow: -3px 5px 4px #000000;
-   width: 750px;
-   top: calc(50% - 50px);
-   left: calc(50% + 320px);
-   transform: translate(-50%, -50%);
-}
-.n {
-   position: absolute;
-   color: white;
-   text-shadow: -3px 5px 4px #000000;
-   width: 750px;
-   top: calc(50% - 50px);
-   left: calc(50% + 370px);
-   transform: translate(-50%, -50%);
-}
-.comma-3 {
-   position: absolute;
-   color: white;
-   text-shadow: -3px 5px 4px #000000;
-   width: 750px;
-   top: calc(50% - 50px);
-   left: calc(50% + 430px);
-   transform: translate(-50%, -50%);
-}
-.A {
-   position: absolute;
-   color: white;
-   text-shadow: -3px 5px 4px #000000;
-   width: 750px;
-   top: calc(50% + 50px);
-   left: calc(50% - 460px);
-   transform: translate(-50%, -50%);
-}
-.S {
-   position: absolute;
-   color: white;
-   text-shadow: -3px 5px 4px #000000;
-   width: 750px;
-   top: calc(50% + 50px);
-   left: calc(50% - 360px);
-   transform: translate(-50%, -50%);
-}
-.o {
-   position: absolute;
-   color: white;
-   text-shadow: -3px 5px 4px #000000;
-   width: 750px;
-   top: calc(50% + 50px);
-   left: calc(50% - 310px);
-   transform: translate(-50%, -50%);
-}
-.f {
-   position: absolute;
-   color: white;
-   text-shadow: -3px 5px 4px #000000;
-   width: 750px;
-   top: calc(50% + 50px);
-   left: calc(50% - 260px);
-   transform: translate(-50%, -50%);
-}
-.t {
-   position: absolute;
-   color: white;
-   text-shadow: -3px 5px 4px #000000;
-   width: 750px;
-   top: calc(50% + 50px);
-   left: calc(50% - 220px);
-   transform: translate(-50%, -50%);
-}
-.w {
-   position: absolute;
-   color: white;
-   text-shadow: -3px 5px 4px #000000;
-   width: 750px;
-   top: calc(50% + 50px);
-   left: calc(50% - 185px);
-   transform: translate(-50%, -50%);
-}
-.a-3 {
-   position: absolute;
-   color: white;
-   text-shadow: -3px 5px 4px #000000;
-   width: 750px;
-   top: calc(50% + 50px);
-   left: calc(50% - 130px);
-   transform: translate(-50%, -50%);
-}
-.r {
-   position: absolute;
-   color: white;
-   text-shadow: -3px 5px 4px #000000;
-   width: 750px;
-   top: calc(50% + 50px);
-   left: calc(50% - 80px);
-   transform: translate(-50%, -50%);
-}
-.e-3 {
-   position: absolute;
-   color: white;
-   text-shadow: -3px 5px 4px #000000;
-   width: 750px;
-   top: calc(50% + 50px);
-   left: calc(50% - 40px);
-   transform: translate(-50%, -50%);
-}
-.D {
-   position: absolute;
-   color: white;
-   text-shadow: -3px 5px 4px #000000;
-   width: 750px;
-   top: calc(50% + 50px);
-   left: calc(50% + 60px);
-   transform: translate(-50%, -50%);
-}
-.e-4 {
-   position: absolute;
-   color: white;
-   text-shadow: -3px 5px 4px #000000;
-   width: 750px;
-   top: calc(50% + 50px);
-   left: calc(50% + 120px);
-   transform: translate(-50%, -50%);
-}
-.v {
-   position: absolute;
-   color: white;
-   text-shadow: -3px 5px 4px #000000;
-   width: 750px;
-   top: calc(50% + 50px);
-   left: calc(50% + 165px);
-   transform: translate(-50%, -50%);
-}
-.e-5 {
-   position: absolute;
-   color: white;
-   text-shadow: -3px 5px 4px #000000;
-   width: 750px;
-   top: calc(50% + 50px);
-   left: calc(50% + 210px);
-   transform: translate(-50%, -50%);
-}
-.l {
-   position: absolute;
-   color: white;
-   text-shadow: -3px 5px 4px #000000;
-   width: 750px;
-   top: calc(50% + 50px);
-   left: calc(50% + 250px);
-   transform: translate(-50%, -50%);
-}
-.o-2 {
-   position: absolute;
-   color: white;
-   text-shadow: -3px 5px 4px #000000;
-   width: 750px;
-   top: calc(50% + 50px);
-   left: calc(50% + 280px);
-   transform: translate(-50%, -50%);
-}
-.p {
-   position: absolute;
-   color: white;
-   text-shadow: -3px 5px 4px #000000;
-   width: 750px;
-   top: calc(50% + 50px);
-   left: calc(50% + 330px);
-   transform: translate(-50%, -50%);
-}
-.e-6 {
-   position: absolute;
-   color: white;
-   text-shadow: -3px 5px 4px #000000;
-   width: 750px;
-   top: calc(50% + 50px);
-   left: calc(50% + 380px);
-   transform: translate(-50%, -50%);
-}
-.r-2 {
-   position: absolute;
-   color: white;
-   text-shadow: -3px 5px 4px #000000;
-   width: 750px;
-   top: calc(50% + 50px);
-   left: calc(50% + 420px);
-   transform: translate(-50%, -50%);
-}
-.period {
-   position: absolute;
-   color: white;
-   text-shadow: -3px 5px 4px #000000;
-   width: 750px;
-   top: calc(50% + 50px);
-   left: calc(50% + 470px);
-   transform: translate(-50%, -50%);
 }
 
 .square {
